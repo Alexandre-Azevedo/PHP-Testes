@@ -8,17 +8,19 @@
 <body>
 
 	<?php
-		$sorteio = [];
-
+		$sorteio = [rand(1,60)];
+		
+		$aux = true;
 		do{
-			$cond = true;
-			$num = rand();
-			foreach ($sorteio as $idx1 => $valor1) {
-				if($num == $valor1){
-					$cond = false;
-				}
+			$num = rand(1, 60);
+			if(!in_array($num, $sorteio)){
+				array_push($sorteio, $num);
 			}
-		}while($cond)
+		}while(count($sorteio) != 6);
+
+		echo '<pre>';
+		echo var_dump($sorteio);
+		echo '</pre>';
 
 	?>
 
