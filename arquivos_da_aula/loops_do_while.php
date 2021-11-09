@@ -7,6 +7,8 @@
 
 <body>
     <?php
+    phpinfo();
+
     $x = 1;
     do {
         echo "X = $x <br />";
